@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>CRUDS</h2>
+            <p>This project can use to save databases for shop
+              <br>
+          What can do?
+          <br>
+              1-create elements
+           <br>
+              2-Read and show the data on table
+              also, it can save on local storage
+             <br>
+              3-update and change the data
+             <br>
+              4-Delete one item or all
+             <br>
+               5-save data on local storage
+             <br>
+          </p>
+        </div>
+        <div class="inputs">
+            <input type="text" name="" id="title" placeholder="title">
+            <div class="price">
+                <input  oninput="getTotal()" type="number" name="" id="price" placeholder="price">
+                <input oninput="getTotal()"  type="number" name="" id="taxes" placeholder="taxes">
+                <input oninput="getTotal()" type="number" name="" id="ads" placeholder="ads">
+                <input oninput="getTotal()" type="number" name="" id="discount" placeholder="discount">
+                <span id="total"></span>
+            </div>
+            <input type="number" name="" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category ">
+            <button id="creat">creat</button>
+      </div>
+        <div class="outputs">
+            <div class="searchBox">
+                <input type="text" name="" id="search" placeholder="search" onkeyup="SearchData(this.value)" >
+                <div class="btnsSearch">
+                    
+                    <button onclick="getSearchMode(this.id)" id="searchTitle"  >search By Title </button>
+                    <button onclick="getSearchMode(this.id)" id="searchCategory"  >search BY Category</button>
+
+                </div>
+            </div>
+            <div id="delteAll">
+                
+            </div>
+            <table  >
+                <thead>
+                    <th>Id</th>
+                    <th>titile</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>totaol</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th >delete</th>
+                </thead>
+                <tbody id="tbody">
+<!--                     
+                    <tr>
+                        <td>1</td>
+                        <td>i phone</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delte </button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>i phone</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delte </button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>i phone</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delte </button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>i phone</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delte </button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    
+    <script src="app.js" defer></script>
+</body>
+</html>

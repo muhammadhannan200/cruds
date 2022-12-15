@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #333;
+    color: white;
+    font-family: sans-serif;
+}
+:root{
+    --dark-bg:#111;
+    --main-clr:purple;
+    --main-hvr:#800080b3;
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+text-transform: uppercase;
+ text-align: center;   
+ margin: 10px 0 ;
+}
+input{
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: none;
+    background-color: var(--dark-bg);
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+input:focus{
+    background-color: #000;
+    box-shadow: 2px 1px 3px 3px purple;
+    border: 0.5px solid purple;
+
+}
+.price  input{
+    width: 19%;
+}
+#total{
+    background-color: red;
+    padding:5px ;
+    margin-left: 50px;
+    border-radius: 5px;
+    
+}
+#total::before{
+    content: 'totoal: ';
+
+}
+button{
+    height: 35px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--main-clr);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    transition: .3s;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: var(--main-hvr);
+    transform: scale(0.9);
+}
+#creat{
+    width: 20%;
+
+}
+.btnsSearch{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 25px 0;
+    background-color: var(--dark-bg);
+    border: 1px solid ;
+}
+table thead{
+    text-transform: uppercase;
+}
+table button{
+    width: fit-content;
+    padding: 5px;
+    
+}
+td:nth-last-child(1),td:nth-last-child(2){
+    border: none;
+    border-bottom: 1px solid white; 
+    /* border-left: 1px solid white ; */
+}
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    border-bottom: none;
+    padding: 8px;
+  }
+  thead{
+border-bottom: solid 1px white;}
+#delteAll button{
+    width: 100% !important;
+    transition: 0.5s;
+    padding: 5px;
+}
+#delteAll button:hover{
+    background-color: red;
+}
+#delete{
+    background: rgba(255, 0, 0, 0.74);
+    margin: auto;
+}
+#update{
+    background: #00800099;
+    margin: auto;
+    transition: 0.3s;
+
+}
+
+@media screen and (max-width:858px) {
+    
+
+.price input {
+    width: 17%;
+}
+.table{
+    font-size: 0.7rem;
+    
+}
+table, th, td {padding: 4px;
+font-size: 0.8rem;}
+table button{
+    padding: 2px;
+    font-size: 0.7rem;  
+    height: 28px;
+}
+}
+@media screen and (max-width:647px) {
+    .crud{
+        width: 90%;
+    }
+    .price input {
+        width: 15%;
+    }
+    
+    .table{
+        font-size: 0.5rem;
+        padding:2px ;
+        width: 100%;
+        border-radius:2px ;
+        
+    }
+    table, th, td{
+        padding: 2px;
+    }
+    table button{
+        padding: 1px;
+        font-size: 0.5rem;  
+        height: 22px;
+    }
+    .outputs button, .inputs button{padding: 8px;
+        font-size: 1rem;  
+        height: 30px;
+
+    }
+}
+@media screen and (max-width:555px) {
+    .crud{
+        /* width: fit-content; */
+    }
+    .price input{
+        width: 12%;
+    }
+    table, th, td{    padding: 2px;
+        font-size: 0.6rem !important;
+    }
+    .outputs button{padding: 5px;
+        font-size: 0.8rem;  
+        height: 22px;
+
+    }
+}
